@@ -7,15 +7,21 @@ class App extends React.Component {
     super();
 
     this.state = {
-      currScene: SCENES.SCENE_T1
+      currScene: 'SCENE_T1'
     }
+  }
+
+  changeScene(sceneCode) {
+    this.setState({
+      currScene: sceneCode
+    })
   }
 
   render() {
     return (
       <div>
-        <p>{this.state.currScene.text}</p>
-        <p>{this.state.currScene.options.opt1.text}</p>
+        <p>{SCENES[this.state.currScene].text}</p>
+        <p>{SCENES[this.state.currScene].options.opt1.text}</p>
       </div>
     )
   }
