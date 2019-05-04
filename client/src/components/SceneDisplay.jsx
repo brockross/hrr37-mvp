@@ -11,15 +11,11 @@ class SceneDisplay extends React.Component {
 
         <p>{this.props.scene.text}</p>
 
-        <button onClick={(e) => {
-          e.preventDefault();
-          this.props.changeScene(this.props.scene.options.opt1.next);
-        }}> {this.props.scene.options.opt1.text} </button>
-
-        <button onClick={(e) => {
-          e.preventDefault();
-          this.props.changeScene(this.props.scene.options.opt2.next);
-        }}> {this.props.scene.options.opt2.text} </button>
+        {this.props.scene.options.map((option, idx) => {
+          return <button key={idx} onClick={(e) => {
+            this.props.changeScene(option.next);
+          }}> {option.text} </button>
+        })}
 
       </div>
     )
