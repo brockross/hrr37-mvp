@@ -1,6 +1,7 @@
 import React from 'react';
 
 import * as SCENES from '../scenes.js';
+import SceneDisplay from './SceneDisplay.jsx';
 
 class App extends React.Component {
   constructor() {
@@ -20,8 +21,7 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <p>{SCENES[this.state.currScene].text}</p>
-        <p>{SCENES[this.state.currScene].options.opt1.text}</p>
+        <SceneDisplay scene={SCENES[this.state.currScene]}/>
       </div>
     )
   }
