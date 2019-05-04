@@ -6,7 +6,7 @@
 
  */
 
-export var SCENE_T1 = {
+export const SCENE_T1 = {
     text: "Hey, I'm Jerry the Giraffe! Want to go on an adventure?",
     options: [
       {
@@ -21,7 +21,7 @@ export var SCENE_T1 = {
     illustration: 'dummy-image.jpg'
   }
 
-export var SCENE_T2 = {
+export const SCENE_T2 = {
   text: "I'm at a fork in the road. One way leads to the jungle where I live, and the other way leads to the big city. Which way should we go?",
   options:[
     {
@@ -37,7 +37,7 @@ export var SCENE_T2 = {
 }
 
 //======= JUNGLE PATH =======//
-export var SCENE_J01 = {
+export const SCENE_J01 = {
   text: "We made it to the jungle! I see the path to my house weaving through the trees. Should we go home, or climb a tree?",
   options: [
     {
@@ -52,7 +52,7 @@ export var SCENE_J01 = {
 }
 
 //======= CITY PATH =======//
-export var SCENE_C01 = {
+export const SCENE_C01 = {
   text: "Wow, there's so much to see here in the city! Ooh, what's that on the ground? Something shiny...",
   options: [
     {
