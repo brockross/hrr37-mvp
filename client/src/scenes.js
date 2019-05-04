@@ -78,7 +78,8 @@ export const SCENE_C02 = {
   options: [
     {
       text: "Unlock it with the key we found!",
-      next: "SCENE_C03"
+      next: "SCENE_C03",
+      condition: "key"
     },
     {
       text: "Look for a different door.",
