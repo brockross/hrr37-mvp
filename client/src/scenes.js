@@ -63,7 +63,8 @@ export const SCENE_C01 = {
   options: [
     {
       text: "Pick it up!",
-      next: "SCENE_C02"
+      next: "SCENE_C02",
+      item: "key"
     },
     {
       text: "Leave it alone.",

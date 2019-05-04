@@ -14,6 +14,10 @@ class SceneDisplay extends React.Component {
         {this.props.scene.options.map((option, idx) => {
           return <button key={idx} onClick={(e) => {
             this.props.changeScene(option.next);
+
+            if (option.item) {
+              this.props.addToInventory(option.item);
+            }
           }}> {option.text} </button>
         })}
 

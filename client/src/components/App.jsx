@@ -8,7 +8,8 @@ class App extends React.Component {
     super();
 
     this.state = {
-      currScene: 'SCENE_T1'
+      currScene: 'SCENE_T1',
+      inventory: []
     }
   }
 
@@ -18,10 +19,19 @@ class App extends React.Component {
     })
   }
 
+  addToInventory(item) {
+    let inventory = this.state.inventory;
+    inventory.push(item);
+
+    this.setState({
+      inventory
+    })
+  }
+
   render() {
     return (
       <div>
-        <SceneDisplay scene={SCENES[this.state.currScene]} changeScene={this.changeScene.bind(this)}/>
+        <SceneDisplay scene={SCENES[this.state.currScene]} changeScene={this.changeScene.bind(this)} addToInventory={this.addToInventory.bind(this)}/>
       </div>
     )
   }
