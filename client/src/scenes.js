@@ -11,7 +11,7 @@ export var SCENE_T1 = {
     options: {
       opt1: {
         text: "Sure!",
-        next: SCENE_T2
+        next: "SCENE_T2"
       },
       opt2: {
         text: "No thanks.",
@@ -26,11 +26,11 @@ export var SCENE_T2 = {
   options: {
     opt1: {
       text: "Jungle!",
-      next: SCENE_J01
+      next: "SCENE_J01"
     },
     opt2: {
       text: "City!",
-      next: SCENE_C01
+      next: "SCENE_C01"
     }
   },
   illustration: 'dummy-image.jpg'
@@ -42,11 +42,11 @@ export var SCENE_J01 = {
   options: {
     opt1: {
       text: "Let's go home.",
-      next: '' //SCENE_END01
+      next: "SCENE_END01"
     },
     opt2: {
       text: "Let's climb a tree!",
-      next: ''//SCENE_J02
+      next: "SCENE_J02"
     }
   }
 }
@@ -57,11 +57,11 @@ export var SCENE_C01 = {
   options: {
     opt1: {
       text: "Pick it up!",
-      next: ''//SCENE_C02
+      next: "SCENE_C02"
     },
     opt2: {
       text: "Leave it alone.",
-      next: ''//SCENE_C02
+      next: "SCENE_C02"
     }
   }
 }

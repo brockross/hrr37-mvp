@@ -21,7 +21,7 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <SceneDisplay scene={SCENES[this.state.currScene]}/>
+        <SceneDisplay scene={SCENES[this.state.currScene]} changeScene={this.changeScene.bind(this)}/>
       </div>
     )
   }
