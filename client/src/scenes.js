@@ -51,6 +51,20 @@ export const SCENE_J01 = {
   ]
 }
 
+export const SCENE_J02 = {
+  text: "Wow, we're way up in the treetops now! What a view. Oh look, there's a jungle bird out on that branch. Should we make friends, or climb back down and head home?",
+  options: [
+    {
+      text: "Let's go home.",
+      next: "SCENE_END01"
+    },
+    {
+      text: "Let's make friends!",
+      next: "SCENE_END02"
+    }
+  ]
+}
+
 //======= CITY PATH =======//
 export const SCENE_C01 = {
   text: "Wow, there's so much to see here in the city! Ooh, what's that on the ground? Something shiny...",
@@ -65,3 +79,5 @@ export const SCENE_C01 = {
     }
   ]
 }
+
+//======= ENDINGS =======//
