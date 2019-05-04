@@ -118,15 +118,30 @@ export const SCENE_C04 = {
 
 export const SCENE_END01 = {
   text: "We made it back home. That was a fun trip--thanks for joining me!",
-  options: []
+  options: [
+    {
+      text: 'Start another adventure',
+      next: 'SCENE_T1'
+    }
+  ]
 };
 
 export const SCENE_END02 = {
   text: "What a great day! We made a new friend. Let's have tea together and watch the sun set.",
-  options: []
+  options: [
+    {
+      text: 'Start another adventure',
+      next: 'SCENE_T1'
+    }
+  ]
 };
 
 export const SCENE_END03 = {
   text: "FIRST GIRAFFE ON THE MOON! This was the best day ever. One small step for this giraffe, one giant leap for giraffekind! Thanks for joining me on this amazing adventure, friend!",
-  options: []
+  options: [
+    {
+      text: 'Start another adventure',
+      next: 'SCENE_T1'
+    }
+  ]
 };
