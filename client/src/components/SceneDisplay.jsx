@@ -15,6 +15,7 @@ class SceneDisplay extends React.Component {
   render() {
     return (
       <div>
+        <img style={{width: '400px'}}src={this.props.scene.illustration}/>
 
         <p>{this.props.scene.text}</p>
 

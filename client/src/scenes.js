@@ -143,7 +143,7 @@ export const SCENE_END02 = {
       next: 'SCENE_T1'
     }
   ],
-  illustration: './imgs/tea-party.png'
+  illustration: 'https://i.imgur.com/RVMoJkb.png'
 };
 
 export const SCENE_END03 = {
