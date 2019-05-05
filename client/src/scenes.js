@@ -40,7 +40,8 @@ export const SCENE_J01 = {
       text: "Let's climb a tree!",
       next: "SCENE_J02"
     }
-  ]
+  ],
+  illustration: 'dummy-image.jpg'
 }
 
 export const SCENE_J02 = {
@@ -54,7 +55,8 @@ export const SCENE_J02 = {
       text: "Let's make friends!",
       next: "SCENE_END02"
     }
-  ]
+  ],
+  illustration: 'dummy-image.jpg'
 }
 
 //======= CITY PATH =======//
@@ -70,7 +72,8 @@ export const SCENE_C01 = {
       text: "Leave it alone.",
       next: "SCENE_C02"
     }
-  ]
+  ],
+  illustration: 'dummy-image.jpg'
 }
 
 export const SCENE_C02 = {
@@ -85,7 +88,8 @@ export const SCENE_C02 = {
       text: "Look for a different door.",
       next: "SCENE_C04"
     }
-  ]
+  ],
+  illustration: 'dummy-image.jpg'
 }
 
 export const SCENE_C03 = {
@@ -99,7 +103,8 @@ export const SCENE_C03 = {
       text: "We better head home.",
       next: "SCENE_END01"
     }
-  ]
+  ],
+  illustration: 'dummy-image.jpg'
 }
 
 export const SCENE_C04 = {
@@ -113,7 +118,8 @@ export const SCENE_C04 = {
       text: "No, we should go home.",
       next: "SCENE_END01"
     }
-  ]
+  ],
+  illustration: 'dummy-image.jpg'
 }
 
 //======= ENDINGS =======//
@@ -125,7 +131,8 @@ export const SCENE_END01 = {
       text: 'Start another adventure',
       next: 'SCENE_T1'
     }
-  ]
+  ],
+  illustration: 'dummy-image.jpg'
 };
 
 export const SCENE_END02 = {
@@ -135,7 +142,8 @@ export const SCENE_END02 = {
       text: 'Start another adventure',
       next: 'SCENE_T1'
     }
-  ]
+  ],
+  illustration: './imgs/tea-party.png'
 };
 
 export const SCENE_END03 = {
@@ -145,5 +153,6 @@ export const SCENE_END03 = {
       text: 'Start another adventure',
       next: 'SCENE_T1'
     }
-  ]
+  ],
+  illustration: 'dummy-image.jpg'
 };

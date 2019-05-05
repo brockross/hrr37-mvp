@@ -2,6 +2,7 @@ import React from 'react';
 
 import * as SCENES from '../scenes.js';
 import SceneDisplay from './SceneDisplay.jsx';
+import Inventory from './Inventory.jsx';
 
 class App extends React.Component {
   constructor() {
@@ -32,6 +33,7 @@ class App extends React.Component {
     return (
       <div>
         <SceneDisplay scene={SCENES[this.state.currScene]} changeScene={this.changeScene.bind(this)} addToInventory={this.addToInventory.bind(this)} inventory={this.state.inventory}/>
+        <Inventory inventory={this.state.inventory}/>
       </div>
     )
   }
