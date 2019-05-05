@@ -31,7 +31,7 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <SceneDisplay scene={SCENES[this.state.currScene]} changeScene={this.changeScene.bind(this)} addToInventory={this.addToInventory.bind(this)}/>
+        <SceneDisplay scene={SCENES[this.state.currScene]} changeScene={this.changeScene.bind(this)} addToInventory={this.addToInventory.bind(this)} inventory={this.state.inventory}/>
       </div>
     )
   }

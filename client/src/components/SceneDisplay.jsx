@@ -5,6 +5,13 @@ class SceneDisplay extends React.Component {
     super(props);
   }
 
+  checkOptCondition(option) {
+    if (option.condition) {
+      return this.props.inventory.includes(option.condition);
+    }
+    return true;
+  }
+
   render() {
     return (
       <div>
@@ -18,7 +25,10 @@ class SceneDisplay extends React.Component {
             if (option.item) {
               this.props.addToInventory(option.item);
             }
-          }}> {option.text} </button>
+          }}
+          disabled={!this.checkOptCondition(option)}>
+          {option.text}
+          </button>
         })}
 
       </div>
