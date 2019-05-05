@@ -5,16 +5,32 @@ class SceneDisplay extends React.Component {
     super(props);
   }
 
+  checkOptCondition(option) {
+    if (option.condition) {
+      return this.props.inventory.includes(option.condition);
+    }
+    return true;
+  }
+
   render() {
     return (
       <div>
+        <img style={{width: '400px'}}src={this.props.scene.illustration}/>
 
         <p>{this.props.scene.text}</p>
 
         {this.props.scene.options.map((option, idx) => {
           return <button key={idx} onClick={(e) => {
             this.props.changeScene(option.next);
-          }}> {option.text} </button>
+
+            if (option.item) {
+              this.props.addToInventory(option.item);
+            }
+          }}
+
+          disabled={!this.checkOptCondition(option)}>
+          {option.text}
+          </button>
         })}
 
       </div>
