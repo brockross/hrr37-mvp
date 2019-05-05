@@ -1,4 +1,13 @@
 import React from 'react';
+import styled from 'styled-components';
+
+const PrimaryText = styled.p`
+  color: #282828;
+  font-family: Helvetica;
+`
+const Illustration = styled.img`
+  width: 400px;
+`
 
 class SceneDisplay extends React.Component {
   constructor(props) {
@@ -15,9 +24,9 @@ class SceneDisplay extends React.Component {
   render() {
     return (
       <div>
-        <img style={{width: '400px'}}src={this.props.scene.illustration}/>
+        <Illustration src={this.props.scene.illustration}/>
 
-        <p>{this.props.scene.text}</p>
+        <PrimaryText>{this.props.scene.text}</PrimaryText>
 
         {this.props.scene.options.map((option, idx) => {
           return <button key={idx} onClick={(e) => {
