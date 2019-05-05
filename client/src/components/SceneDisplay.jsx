@@ -27,6 +27,7 @@ class SceneDisplay extends React.Component {
               this.props.addToInventory(option.item);
             }
           }}
+
           disabled={!this.checkOptCondition(option)}>
           {option.text}
           </button>
