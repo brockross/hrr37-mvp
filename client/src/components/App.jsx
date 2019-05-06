@@ -26,19 +26,17 @@ const App = () => {
   const changeScene = (sceneCode) => {
     setScene(sceneCode);
   }
-
   const addToInventory = (item) => {
     setInventory([...inventory, item])
   }
 
-
-    return (
-      <MainWrapper>
-        <Title>The Adventures of Jerry the Giraffe</Title>
-        <SceneDisplay scene={SCENES[currScene]} changeScene={changeScene} addToInventory={addToInventory} inventory={inventory}/>
-        <Inventory inventory={inventory}/>
-      </MainWrapper>
-    )
+  return (
+    <MainWrapper>
+      <Title>The Adventures of Jerry the Giraffe</Title>
+      <SceneDisplay scene={SCENES[currScene]} changeScene={changeScene} addToInventory={addToInventory} inventory={inventory}/>
+      <Inventory inventory={inventory}/>
+    </MainWrapper>
+  )
 }
 
 export default App;
