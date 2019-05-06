@@ -1,5 +1,5 @@
 export const SCENE_T1 = {
-    text: "Hey, I'm Jerry the Giraffe! Want to go on an adventure?",
+    text: "Hi, I'm Jerry the Giraffe! Want to go on an adventure?",
     options: [
       {
         text: "Sure!",

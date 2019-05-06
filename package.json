@@ -29,6 +29,7 @@
     "morgan": "^1.9.1",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
+    "react-spring": "^8.0.20",
     "styled-components": "^4.2.0",
     "webpack": "^4.30.0",
     "webpack-cli": "^3.3.2"

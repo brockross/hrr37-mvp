@@ -1,42 +1,44 @@
-import React from 'react';
+import React, { useState } from 'react';
+import styled from 'styled-components';
 
 import * as SCENES from '../scenes.js';
 import SceneDisplay from './SceneDisplay.jsx';
 import Inventory from './Inventory.jsx';
 
-class App extends React.Component {
-  constructor() {
-    super();
+//#region styles
+const MainWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+`
+const Title = styled.h1`
+  font-family: Pacifico;
+  font-size: 40px;
+`
+//#endregion
 
-    this.state = {
-      currScene: 'SCENE_T1',
-      inventory: []
-    }
+const App = () => {
+  const [currScene, setScene] = useState('SCENE_T1');
+  const [inventory, setInventory] = useState([]);
+
+  const changeScene = (sceneCode) => {
+    setScene(sceneCode);
   }
 
-  changeScene(sceneCode) {
-    this.setState({
-      currScene: sceneCode
-    })
+  const addToInventory = (item) => {
+    setInventory([...inventory, item])
   }
 
-  addToInventory(item) {
-    let inventory = this.state.inventory;
-    inventory.push(item);
 
-    this.setState({
-      inventory
-    })
-  }
-
-  render() {
     return (
-      <div>
-        <SceneDisplay scene={SCENES[this.state.currScene]} changeScene={this.changeScene.bind(this)} addToInventory={this.addToInventory.bind(this)} inventory={this.state.inventory}/>
-        <Inventory inventory={this.state.inventory}/>
-      </div>
+      <MainWrapper>
+        <Title>The Adventures of Jerry the Giraffe</Title>
+        <SceneDisplay scene={SCENES[currScene]} changeScene={changeScene} addToInventory={addToInventory} inventory={inventory}/>
+        <Inventory inventory={inventory}/>
+      </MainWrapper>
     )
-  }
 }
 
 export default App;

@@ -1,50 +1,55 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const PrimaryText = styled.p`
+//#region styles
+const SceneWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+`
+const PrimaryText = styled.div`
   color: #282828;
-  font-family: Helvetica;
+  font-family: 'Indie Flower';
+  font-size: 20px;
+  width: 33vw;
 `
 const Illustration = styled.img`
   width: 400px;
 `
+//#endregion
+const SceneDisplay = (props) => {
 
-class SceneDisplay extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-
-  checkOptCondition(option) {
+  const checkOptCondition = (option) => {
     if (option.condition) {
-      return this.props.inventory.includes(option.condition);
+      return props.inventory.includes(option.condition);
     }
     return true;
   }
 
-  render() {
+
     return (
-      <div>
-        <Illustration src={this.props.scene.illustration}/>
+      <SceneWrapper>
+        <Illustration src={props.scene.illustration}/>
 
-        <PrimaryText>{this.props.scene.text}</PrimaryText>
+        <PrimaryText>{props.scene.text}</PrimaryText>
 
-        {this.props.scene.options.map((option, idx) => {
+        {props.scene.options.map((option, idx) => {
           return <button key={idx} onClick={(e) => {
-            this.props.changeScene(option.next);
+            props.changeScene(option.next);
 
             if (option.item) {
-              this.props.addToInventory(option.item);
+              props.addToInventory(option.item);
             }
           }}
 
-          disabled={!this.checkOptCondition(option)}>
+          disabled={!checkOptCondition(option)}>
           {option.text}
           </button>
         })}
 
-      </div>
+      </SceneWrapper>
     )
-  }
 }
 
 export default SceneDisplay;
