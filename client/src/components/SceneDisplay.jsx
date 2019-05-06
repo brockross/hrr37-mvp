@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import {useSpring, animated} from 'react-spring'
+import {useSpring, animated, Transition, useTransition} from 'react-spring'
 import styled from 'styled-components';
 
 //#region styles
@@ -20,7 +20,9 @@ const Illustration = styled.img`
 `
 //#endregion
 const SceneDisplay = (props) => {
+
   const testy = useSpring({config: {duration: 2000}, opacity: 1, from: {opacity: 0}})
+
 
   const checkOptCondition = (option) => {
     if (option.condition) {
