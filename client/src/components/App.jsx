@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
+import Sound from 'react-sound';
 
 import * as SCENES from '../scenes.js';
 import SceneDisplay from './SceneDisplay.jsx';
@@ -15,8 +16,11 @@ const MainWrapper = styled.div`
 `
 const Title = styled.h1`
   font-family: Pacifico;
-  font-size: 40px;
+  font-size: 48px;
+  color: #333333;
+  margin: 40px 0px;
 `
+
 //#endregion
 
 const App = () => {
@@ -33,9 +37,15 @@ const App = () => {
   return (
     <MainWrapper>
       <Title>The Adventures of Jerry the Giraffe</Title>
+
       <SceneDisplay scene={SCENES[currScene]} changeScene={changeScene} addToInventory={addToInventory} inventory={inventory}/>
-      <Inventory inventory={inventory}/>
+
+      {/* <Inventory inventory={inventory}/> */}
+
+      <Sound url={'http://soundimage.org/wp-content/uploads/2017/07/Arcade-Puzzler.mp3'} playStatus={Sound.status.PLAYING} volume={30} loop={true} />
     </MainWrapper>
+
+
   )
 }
 

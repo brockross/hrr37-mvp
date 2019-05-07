@@ -7,10 +7,10 @@ export const SCENE_T1 = {
       },
       {
         text: "No thanks.",
-        next: '' //EXIT_SCENE
+        next: 'SCENE_WHY'
       }
     ],
-    illustration: 'dummy-image.jpg'
+    illustration: 'https://s3-us-west-2.amazonaws.com/fec-brox/images/jerry.png'
   }
 
 export const SCENE_T2 = {
@@ -25,7 +25,18 @@ export const SCENE_T2 = {
       next: "SCENE_C01"
     }
   ],
-  illustration: 'dummy-image.jpg'
+  illustration: 'https://s3-us-west-2.amazonaws.com/fec-brox/images/sign.png'
+}
+
+export const SCENE_WHY = {
+  text: "",
+  options: [
+    {
+      text: "Start over",
+      next: "SCENE_T1"
+    }
+  ],
+  illustration: 'https://media.giphy.com/media/IhWQ8Uw1JOQgM/giphy.gif'
 }
 
 //======= JUNGLE PATH =======//
@@ -80,7 +91,7 @@ export const SCENE_C02 = {
   text: "Whoa, this big metal building looks interesting. Wonder what's inside... looks like the door is locked. What should we do?",
   options: [
     {
-      text: "Unlock it with the key we found!",
+      text: "Try the key we found!",
       next: "SCENE_C03",
       condition: "key"
     },
