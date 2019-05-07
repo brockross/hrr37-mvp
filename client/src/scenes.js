@@ -1,5 +1,5 @@
 export const SCENE_T1 = {
-    text: "Hey, I'm Jerry the Giraffe! Want to go on an adventure?",
+    text: "Hi, I'm Jerry the Giraffe! Want to go on an adventure?",
     options: [
       {
         text: "Sure!",
@@ -7,10 +7,10 @@ export const SCENE_T1 = {
       },
       {
         text: "No thanks.",
-        next: '' //EXIT_SCENE
+        next: 'SCENE_WHY'
       }
     ],
-    illustration: 'dummy-image.jpg'
+    illustration: 'https://s3-us-west-2.amazonaws.com/fec-brox/images/jerry.png'
   }
 
 export const SCENE_T2 = {
@@ -25,7 +25,18 @@ export const SCENE_T2 = {
       next: "SCENE_C01"
     }
   ],
-  illustration: 'dummy-image.jpg'
+  illustration: 'https://s3-us-west-2.amazonaws.com/fec-brox/images/sign.png'
+}
+
+export const SCENE_WHY = {
+  text: "",
+  options: [
+    {
+      text: "Start over",
+      next: "SCENE_T1"
+    }
+  ],
+  illustration: 'https://media.giphy.com/media/IhWQ8Uw1JOQgM/giphy.gif'
 }
 
 //======= JUNGLE PATH =======//
@@ -41,7 +52,7 @@ export const SCENE_J01 = {
       next: "SCENE_J02"
     }
   ],
-  illustration: 'dummy-image.jpg'
+  illustration: 'https://s3-us-west-2.amazonaws.com/fec-brox/images/jungle.png'
 }
 
 export const SCENE_J02 = {
@@ -56,7 +67,7 @@ export const SCENE_J02 = {
       next: "SCENE_END02"
     }
   ],
-  illustration: 'dummy-image.jpg'
+  illustration: 'https://s3-us-west-2.amazonaws.com/fec-brox/images/bird.png'
 }
 
 //======= CITY PATH =======//
@@ -73,14 +84,14 @@ export const SCENE_C01 = {
       next: "SCENE_C02"
     }
   ],
-  illustration: 'dummy-image.jpg'
+  illustration: 'https://s3-us-west-2.amazonaws.com/fec-brox/images/key.png'
 }
 
 export const SCENE_C02 = {
   text: "Whoa, this big metal building looks interesting. Wonder what's inside... looks like the door is locked. What should we do?",
   options: [
     {
-      text: "Unlock it with the key we found!",
+      text: "Try the key we found!",
       next: "SCENE_C03",
       condition: "key"
     },
@@ -89,7 +100,7 @@ export const SCENE_C02 = {
       next: "SCENE_C04"
     }
   ],
-  illustration: 'dummy-image.jpg'
+  illustration: 'http://s3-us-west-2.amazonaws.com/fec-brox/images/door.png'
 }
 
 export const SCENE_C03 = {
@@ -104,7 +115,7 @@ export const SCENE_C03 = {
       next: "SCENE_END01"
     }
   ],
-  illustration: 'dummy-image.jpg'
+  illustration: 'https://s3-us-west-2.amazonaws.com/fec-brox/images/rocket.png'
 }
 
 export const SCENE_C04 = {
@@ -119,7 +130,7 @@ export const SCENE_C04 = {
       next: "SCENE_END01"
     }
   ],
-  illustration: 'dummy-image.jpg'
+  illustration: 'http://s3-us-west-2.amazonaws.com/fec-brox/images/door2.png'
 }
 
 //======= ENDINGS =======//
@@ -132,7 +143,7 @@ export const SCENE_END01 = {
       next: 'SCENE_T1'
     }
   ],
-  illustration: 'dummy-image.jpg'
+  illustration: 'https://s3-us-west-2.amazonaws.com/fec-brox/images/jerry-family.png'
 };
 
 export const SCENE_END02 = {
@@ -143,7 +154,7 @@ export const SCENE_END02 = {
       next: 'SCENE_T1'
     }
   ],
-  illustration: 'https://i.imgur.com/RVMoJkb.png'
+  illustration: 'http://s3-us-west-2.amazonaws.com/fec-brox/images/tea-party.png'
 };
 
 export const SCENE_END03 = {
@@ -154,5 +165,5 @@ export const SCENE_END03 = {
       next: 'SCENE_T1'
     }
   ],
-  illustration: 'dummy-image.jpg'
+  illustration: 'http://s3-us-west-2.amazonaws.com/fec-brox/images/moon.png'
 };
