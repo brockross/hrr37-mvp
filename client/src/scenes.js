@@ -100,7 +100,7 @@ export const SCENE_C02 = {
       next: "SCENE_C04"
     }
   ],
-  illustration: 'https://s3-us-west-2.amazonaws.com/fec-brox/images/door.png'
+  illustration: 'http://s3-us-west-2.amazonaws.com/fec-brox/images/door.png'
 }
 
 export const SCENE_C03 = {
@@ -130,7 +130,7 @@ export const SCENE_C04 = {
       next: "SCENE_END01"
     }
   ],
-  illustration: 'https://s3-us-west-2.amazonaws.com/fec-brox/images/door2.png'
+  illustration: 'http://s3-us-west-2.amazonaws.com/fec-brox/images/door2.png'
 }
 
 //======= ENDINGS =======//
@@ -154,7 +154,7 @@ export const SCENE_END02 = {
       next: 'SCENE_T1'
     }
   ],
-  illustration: 'https://s3-us-west-2.amazonaws.com/fec-brox/images/tea-party.png'
+  illustration: 'http://s3-us-west-2.amazonaws.com/fec-brox/images/tea-party.png'
 };
 
 export const SCENE_END03 = {
@@ -165,5 +165,5 @@ export const SCENE_END03 = {
       next: 'SCENE_T1'
     }
   ],
-  illustration: 'https://s3-us-west-2.amazonaws.com/fec-brox/images/moon.png'
+  illustration: 'http://s3-us-west-2.amazonaws.com/fec-brox/images/moon.png'
 };

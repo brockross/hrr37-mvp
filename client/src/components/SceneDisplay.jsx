@@ -38,25 +38,29 @@ const PrimaryText = styled(animated.div)`
   width: 33vw;
   margin: 5px;
   text-align: center;
+  margin-bottom: 2vh;
 `
-
 const Illustration = styled.img`
   width: 400px;
   position: absolute;
-  top: 4vh;
+  top: 12vh;
 `
-
+const BtnWrapper = styled.div`
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+`
 const ChoiceButton = styled.button`
   margin: 1vw;
-  height: 100px;
-  width: 300px;
+  height: 9vh;
+  width: 15vw;
   border: #333333 solid 1px;
   border-radius: 5px;
   font-family: Raleway;
-  font-size: 30px;
+  font-size: 24px;
   color: whitesmoke;
   background-color: #444444;
-
 `
 //#endregion
 const SceneDisplay = (props) => {
@@ -71,7 +75,7 @@ const SceneDisplay = (props) => {
   }
 
   return (
-    <div>
+    <div className={props.className}>
     <SceneWrapper>
       <Binding src={'https://s3-us-west-2.amazonaws.com/fec-brox/images/Overlay_Spiral_Color_Black_Long_Landscape.png'}/>
 
@@ -81,6 +85,7 @@ const SceneDisplay = (props) => {
 
     </SceneWrapper>
 
+    <BtnWrapper>
     {props.scene.options.map((option, idx) => {
         return <ChoiceButton key={idx} onClick={(e) => {
           props.changeScene(option.next);
@@ -94,6 +99,7 @@ const SceneDisplay = (props) => {
         {option.text}
         </ChoiceButton>
       })}
+    </BtnWrapper>
     </div>
   )
 }

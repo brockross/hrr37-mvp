@@ -7,16 +7,27 @@ const InvWrapper = styled.div`
   background-repeat: no-repeat;
   width: 300px;
   height: 500px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+`
+const StyledList = styled.ul`
+  position: relative;
+  top: 20vh;
+  font-family: Raleway;
 `
 
 const Inventory = (props) => {
   return (
-    <InvWrapper>
-      <h4>INVENTORY:</h4>
-      {props.inventory.map(item => {
-        return <p>{item}</p>
-      })}
-    </InvWrapper>
+    <div className={props.className}>
+      <InvWrapper>
+        <StyledList>
+        {props.inventory.map(item => {
+          return <li>{item}</li>
+        })}
+        </StyledList>
+      </InvWrapper>
+    </div>
   )
 }
 
