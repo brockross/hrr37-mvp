@@ -52,7 +52,7 @@ const App = () => {
 
       <StyledInventory inventory={inventory}/>
 
-      <Sound url={'http://soundimage.org/wp-content/uploads/2017/07/Arcade-Puzzler.mp3'} playStatus={Sound.status.PLAYING} volume={30} loop={true} />
+      {/* <Sound url={'http://soundimage.org/wp-content/uploads/2017/07/Arcade-Puzzler.mp3'} playStatus={Sound.status.PLAYING} volume={30} loop={true} />*/}
     </MainWrapper>
 
 
